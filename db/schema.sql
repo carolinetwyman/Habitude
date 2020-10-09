@@ -10,9 +10,9 @@ CREATE TABLE users (
 ),
 CREATE TABLE goals (
     user_goals INT NOT NULL AUTO_INCREMENT,
-    sleep_time BOOLEAN DEFAULT false,
-    mindful_minutes BOOLEAN DEFAULT false,
-    exercise_time BOOLEAN DEFAULT false,
+    sleep_time INT,
+    mindful_minutes INT,
+    exercise_time INT,
     user_id int,
     PRIMARY KEY (user_goals),
     FOREIGN KEY (user_id) REFERENCES users(user_id)
