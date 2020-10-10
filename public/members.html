@@ -8,15 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
     <link href="stylesheets/members.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180240530-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
 
-        gtag('config', 'UA-180240530-1');
-    </script>
 </head>
 
 <body>
@@ -25,8 +17,9 @@
     <nav>
         <div class="nav">
             <div class="li flex-container">
-                <a class="nav-link flex-item" href="/members">habitude</a>
-                <a class="nav-link flex-item" href="/logout">Logout</a>
+                <a class="nav-link flex-item" id="logo" href="/members">habitude</a>
+                <a class="nav-link flex-item" id="logout" href="/logout">Logout</a>
+                <a class="nav-link flex-item" id="logout" href="/progresschart.html">progress chart</a>
             </div>
         </div>
     </nav>
@@ -36,22 +29,12 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <h2 id="habitHeader">Welcome <span class="member-name">!</span></h2>
+            <div class="col-md-6">
+                <h2 id="habitHeader">Welcome <span class="member-name">!</span>!</h2>
+                <h2 id="habitHeader">Select a habit you would like to form</h2>
             </div>
         </div>
     </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <h2 id="habitHeader">Select a habit you would like to form!</h2>
-            </div>
-        </div>
-    </div>
-
-
-
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
