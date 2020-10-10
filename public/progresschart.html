@@ -144,21 +144,17 @@
             }
         });
     </script>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <h2 id="habitHeader">Welcome to the Habitude Community!</h2>
-                <iframe width="600" height="450"
-                    src="https://datastudio.google.com/embed/reporting/f79624f6-e3d7-47a3-bb44-fdacbba7b424/page/MogjB"
-                    frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
+    <!-- JQuery, Internal Javascript, and Google Analytics API -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/members.js"></script>
-    <iframe width="600" height="450"
-        src="https://datastudio.google.com/embed/reporting/f79624f6-e3d7-47a3-bb44-fdacbba7b424/page/MogjB"
-        frameborder="0" style="border:0" allowfullscreen></iframe>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180240530-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-180240530-1');
+    </script>
     <div class="footer">
         <p>project2 copyright 2020</p>
     </div>
