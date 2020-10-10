@@ -25,32 +25,34 @@
     </nav>
 
 
-
-
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <h2 id="habitHeader">Welcome <span class="member-name">!</span>!</h2>
-                <h2 id="habitHeader">Select a habit you would like to form</h2>
+            <div class="col-md-6 col-md-offset-3">
+                <h2>Welcome <span class="member-name">!</span></h2>
+                <h3>What are the habits you want to practice for 21 days</h3>
+                <form action="/goals">
+                <input type="checkbox" id="sleep_time" name="sleep_time" value="leep time">
+                <label for="sleep_time"> Sleep time</label><br>
+                <input type="checkbox" id="mindful_minutes" name="mindful_minutes" value="Mindful minutes">
+                <label for="mindful_minutes"> Mindfulness</label><br>
+                <input type="checkbox" id="exercise_time" name="exercise_time" value="Exercise time">
+                <label for="exercise_time"> Exercise time</label><br><br>
+                <input type="submit" value="Submit">
+                </form>
+                <h1>Daily activities submition</h1>
+                Sleep time: <input type="number" id="sleeptime" name="sleep_time"> hrs<br><br>
+                Mindfulness: <input type="number" id="mindfulminutes" name="mindful_minutes"> hrs<br><br>
+                Exercise time: <input type="number" id="exercisetime" name="exercise_time"> hrs<br><br>             
+                <input type="button" id="submitDaily" value="Submit activity">
+                <h2><span class="yourDaily"></span></h2>
             </div>
         </div>
     </div>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/members.js"></script>
-
-
+    
     <div class="footer">
         <p>project2 copyright 2020</p>
     </div>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/members.js"></script>
 </body>
-
-
-
-
-
-
 </html>
