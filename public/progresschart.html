@@ -34,15 +34,15 @@
 
     <div class="a">
         <canvas id="myChart1"></canvas>
-    </div >
+    </div>
 
     <div class="a">
         <canvas id="myChart2"></canvas>
-    </div >
+    </div>
 
     <div class="a">
         <canvas id="myChart3"></canvas>
-    </div >
+    </div>
     <script>
         var ctx = document.getElementById('myChart1').getContext('2d');
         var chart = new Chart(ctx, {
@@ -50,103 +50,115 @@
             type: 'line',
             // The data for our dataset
             data: {
-    labels: ["Day 1", "Day 2","Day 3","Day 4","Day 5","Day 6","Day 7"],
-    datasets: [{ 
-        data: [8, 8, 8, 8, 8, 8, 8],
-        label: "Goals",
-        borderColor: "#FF9C39",
-        fill: false
-      }, { 
-        data: [5, 9, 7, 5, 6, 10, 4],
-        label: "Daily Log",
-        borderColor: "#8e5ea2",
-        fill: false
-      }
-    ]
-  },
-  options: {
-    title: {
-      display: true,
-      text: 'Sleep Chart'
-    }, scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true,
-                    }
-                }]
-    }
-  }
-});
-var ctx = document.getElementById('myChart2').getContext('2d');
-var chart = new Chart(ctx, {
+                labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
+                datasets: [{
+                    data: [8, 8, 8, 8, 8, 8, 8],
+                    label: "Goals",
+                    borderColor: "#FF9C39",
+                    fill: false
+                }, {
+                    data: [5, 9, 7, 5, 6, 10, 4],
+                    label: "Daily Log",
+                    borderColor: "#8e5ea2",
+                    fill: false
+                }
+                ]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Sleep Chart'
+                }, scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                        }
+                    }]
+                }
+            }
+        });
+        var ctx = document.getElementById('myChart2').getContext('2d');
+        var chart = new Chart(ctx, {
             // The type of chart we want to create
             type: 'line',
             // The data for our dataset
             data: {
-    labels: ["Day 1", "Day 2","Day 3","Day 4","Day 5","Day 6","Day 7"],
-    datasets: [{ 
-        data: [0.5, 1, 0.5, 1.5, 1, 0.5, 1, 1.5],
-        label: "Goals",
-        borderColor: "#3940FF",
-        fill: false
-      }, { 
-        data: [1, 2, 0, 0.5, 1, 1.5, 2, 1],
-        label: "Daily Log",
-        borderColor: "#FFDA41",
-        fill: false
-      }
-    ]
-  },
-  options: {
-    title: {
-      display: true,
-      text: 'Mindfulness Chart'
-    }, scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true,
-                    }
-                }]
-    }
-  }
-});
-var ctx = document.getElementById('myChart3').getContext('2d');
-var chart = new Chart(ctx, {
+                labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
+                datasets: [{
+                    data: [0.5, 1, 0.5, 1.5, 1, 0.5, 1, 1.5],
+                    label: "Goals",
+                    borderColor: "#3940FF",
+                    fill: false
+                }, {
+                    data: [1, 2, 0, 0.5, 1, 1.5, 2, 1],
+                    label: "Daily Log",
+                    borderColor: "#FFDA41",
+                    fill: false
+                }
+                ]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Mindfulness Chart'
+                }, scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                        }
+                    }]
+                }
+            }
+        });
+        var ctx = document.getElementById('myChart3').getContext('2d');
+        var chart = new Chart(ctx, {
             // The type of chart we want to create
             type: 'line',
             // The data for our dataset
             data: {
-    labels: ["Day 1", "Day 2","Day 3","Day 4","Day 5","Day 6","Day 7"],
-    datasets: [{ 
-        data: [1, 2, 0.5, 1, 0.5, 3, 2, 1.5],
-        label: "Goals",
-        borderColor: "#FF3939",
-        fill: false
-      }, { 
-        data: [2, 0.5, 1, 0.5, 1.5, 2, 1.5, 1],
-        label: "Daily Log",
-        borderColor: "#394DFF",
-        fill: false
-      }
-    ]
-  },
-  options: {
-    title: {
-      display: true,
-      text: 'Exercise Chart'
-    }, scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true,
-                    }
-                }]
-    }
-  }
-});
+                labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
+                datasets: [{
+                    data: [1, 2, 0.5, 1, 0.5, 3, 2, 1.5],
+                    label: "Goals",
+                    borderColor: "#FF3939",
+                    fill: false
+                }, {
+                    data: [2, 0.5, 1, 0.5, 1.5, 2, 1.5, 1],
+                    label: "Daily Log",
+                    borderColor: "#394DFF",
+                    fill: false
+                }
+                ]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Exercise Chart'
+                }, scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                        }
+                    }]
+                }
+            }
+        });
     </script>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 id="habitHeader">Welcome to the Habitude Community!</h2>
+                <iframe width="600" height="450"
+                    src="https://datastudio.google.com/embed/reporting/f79624f6-e3d7-47a3-bb44-fdacbba7b424/page/MogjB"
+                    frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/members.js"></script>
-    <iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/f79624f6-e3d7-47a3-bb44-fdacbba7b424/page/MogjB" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <iframe width="600" height="450"
+        src="https://datastudio.google.com/embed/reporting/f79624f6-e3d7-47a3-bb44-fdacbba7b424/page/MogjB"
+        frameborder="0" style="border:0" allowfullscreen></iframe>
     <div class="footer">
         <p>project2 copyright 2020</p>
     </div>
