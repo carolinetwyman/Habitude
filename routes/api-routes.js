@@ -50,4 +50,53 @@ module.exports = function(app) {
       });
     }
   });
+
+    // // GET route for getting all of the goals
+  // app.get("/api/goals/", function(req, res) {
+  //   db.Goals.findAll({})
+  //     .then(function(dbGoals) {
+  //       res.json(dbGoals);
+  //     });
+  // });
+
+app.get("/api/goals", function(req, res) {
+  var query = {};
+  if (req.query.user_id) {
+    query.UserId = req.query.user_id;
+  }
+  // Here we add an "include" property to our options in our findAll query
+  // We set the value to an array of the models we want to include in a left outer join
+  // In this case, just db.User
+  db.Goals.findAll({
+    where: query,
+    include: [db.User]
+  }).then(function(dbGoals) {
+    res.json(dbGoals);
+  });
+});
+
+// // GET route for getting all of the daily-logs
+// app.get("/api/dailylog", function(req, res) {
+//   db.DailyLog.findAll({})
+//     .then(function(dbDailyLog) {
+//       res.json(dbDailyLog);
+//     });
+// });
+
+app.get("/api/dailylog", function(req, res) {
+  var query = {};
+  if (req.query.user_id) {
+    query.UserId = req.query.user_id;
+  }
+  // Here we add an "include" property to our options in our findAll query
+  // We set the value to an array of the models we want to include in a left outer join
+  // In this case, just db.User
+  db.DailyLog.findAll({
+    where: query,
+    include: [db.User]
+  }).then(function(dbDailyLog) {
+    res.json(dbDailyLog);
+  });
+});
+
 };
