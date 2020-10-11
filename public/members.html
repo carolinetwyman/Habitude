@@ -26,28 +26,35 @@
 
     <div class="container">
         <div class="row">
-            <div >
+            <div class="col-md-6">
                 <h2>Welcome <span class="member-name">!</span></h2>
-                <h3>What habits would you like to practice?</h3>
-                <form action="/goals">
-                    <div class="myList">
-                        <input type="checkbox" id="sleep_time" name="sleep_time" value="sleep time">
-                        <label  for="sleep_time"> Sleep time</label><br>
-                        <input  type="checkbox" id="mindful_minutes" name="mindful_minutes" value="Mindful minutes">
-                        <label  for="mindful_minutes"> Mindfulness</label><br>
-                        <input  type="checkbox" id="exercise_time" name="exercise_time" value="Exercise time">
-                        <label  for="exercise_time"> Exercise time</label><br><br>
-                    </div>
-                    <input class="btn btn-primary" type="submit" value="Submit">
-                </form>
+                <h1>What habits would you like to develop?</h1>
+                Sleep: <input type="number" id="sleeptime" name="sleep_time"> hrs a night!<br><br>
+                Practice Mindfulness: <input type="number" id="mindfulminutes" name="mindful_minutes"> hrs a day!<br><br>
+                Exercise: <input type="number" id="exercisetime" name="exercise_time"> hrs a day!<br><br>
+                <input type="button" id="submitGoals" value="Submit Goals">
+                <h2><span class="yourDaily"></span></h2>
             </div>
         </div>
     </div>
-    
+
     <div class="footer">
         <p>project2 copyright 2020</p>
     </div>
+    <!-- JQuery, Internal Javascript, and Google Analytics API -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/members.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180240530-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-180240530-1');
+    </script>
 </body>
+
 </html>

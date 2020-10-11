@@ -2,21 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>Qs</title>
+    <title>Community</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
     <link href="stylesheets/style.css" rel="stylesheet">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180240530-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-180240530-1');
-    </script>
-
 </head>
 
 <body>
@@ -24,23 +14,32 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="/logout">
-                    Logout caro
+                    Habitude Community
                 </a>
             </div>
         </div>
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <h2>Welcome <span class="member-name"></span></h2>
-                <h3>Insert questions here</h3>
+            <div class="col-md-6">
+                <h2 id="habitHeader">Welcome to the Habitude Habitat!</h2>
+                <iframe width="600" height="450"
+                    src="https://datastudio.google.com/embed/reporting/f79624f6-e3d7-47a3-bb44-fdacbba7b424/page/MogjB"
+                    frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </div>
     </div>
-
+        <!-- JQuery, Internal Javascript, and Google Analytics API -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/members.js"></script>
-
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180240530-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+    
+            gtag('config', 'UA-180240530-1');
+        </script>
 </body>
 
 </html>
