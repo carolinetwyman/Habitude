@@ -1,6 +1,6 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
-const passport = require("../config/passport");
+const passport = require("../../HabitudeBackup/config/passport");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -34,6 +34,32 @@ module.exports = function(app) {
   app.get("/logout", (req, res) => {
     req.logout();
     res.redirect("/");
+  });
+
+  // Route for inputting data to the goals table
+  app.post("/api/members", (req, res) => {
+    db.Goal.create({
+      email: req.body.email,
+      password: req.body.password
+    })
+      .then(() => {
+        res.redirect(307, "/api/login");
+      })
+      .catch(err => {
+        res.status(401).json(err);
+      });
+  });
+
+  app.post("/api/sub", (req, res) => {
+    console.log(req.body.sleep_time)
+    db.DailyLog.create(req.body)
+      .then((data) => {
+        console.log("test",data)
+        // res.redirect(307, "/api/login");
+      })
+      .catch(err => {
+        res.status(401).json(err);
+      });
   });
 
   // Route for getting some data about our user to be used client side

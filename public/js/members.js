@@ -12,7 +12,9 @@ $(document).ready(() => {
     var sleep = $("#sleeptime").val();
     var mindful = $("#mindfulminutes").val();
     var exercise = $("#exercisetime").val();
-    $(".yourDaily").text("You sleep: "+ sleep+"hrs. Mindfulness: "+ mindful +"hrs and  Exercies: "+ exercise)
+
+    console.log("test", sleep, mindful, exercise)
+    $(".yourDaily").text("You sleep: " + sleep + "hrs. Mindfulness: " + mindful + "hrs and  Exercies: " + exercise)
     var newData = {
       sleep_time: sleep,
       mindful_minutes: mindful,
@@ -20,16 +22,16 @@ $(document).ready(() => {
     }
 
     $.post("/api/sub", newData)
-    .then((res) => {
-      console.log(res)
-      $("#sleeptime").val("");
-      $("#mindfulminutes").val("");
-     ("#exercisetime").val("");
-      //take the data to the routes and take me to the members webpage
-      //console.log(res.json(Actives))
-      //window.location.replace("/members");
-    })
-    .catch(err => console.log("yoyo--> " + err));
+      .then((res) => {
+        console.log(res)
+        $("#sleeptime").val("");
+        $("#mindfulminutes").val("");
+        $("#exercisetime").val("");
+        //take the data to the routes and take me to the members webpage
+        //console.log(res.json(Actives))
+        //window.location.replace("/members");
+      })
+      .catch(err => console.log("yoyo--> " + err));
   });
   ///////////////////////////////////////////////
 });
