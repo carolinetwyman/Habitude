@@ -17,8 +17,11 @@
         <div class="nav">
             <div class="li flex-container">
                 <a class="nav-link flex-item" id="logo" href="/members">habitude</a>
-                <a class="nav-link flex-item" id="logout" href="/logout">Logout</a>
-                <a class="nav-link flex-item" id="logout" href="/progresschart.html">progress chart</a>
+                <div class="li flex-container">
+                    <a class="nav-link flex-item" id="logout" href="/progresschart.html">progress chart</a>
+                    <a class="nav-link flex-item" id="logout" href="/logout">logout</a>
+
+                </div>
             </div>
         </div>
     </nav>
@@ -37,7 +40,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="footer">
         <p>project2 copyright 2020</p>
     </div>
@@ -47,10 +50,14 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180240530-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-180240530-1');
     </script>
 </body>
+
 </html>
