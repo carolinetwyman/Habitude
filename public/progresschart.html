@@ -44,18 +44,27 @@
         </div>
     </div>
 
-        <div class="a">
-            <canvas id="myChart1"></canvas>
-        </div>
+    <div class="a">
+        <canvas id="myChart1"></canvas>
+    </div>
 
-        <div class="a">
-            <canvas id="myChart2"></canvas>
-        </div>
+    <div class="a">
+        <canvas id="myChart2"></canvas>
+    </div>
 
-        <div class="a">
-            <canvas id="myChart3"></canvas>
-        </div>
-        <script>
+    <div class="a">
+        <canvas id="myChart3"></canvas>
+    </div>
+    <script>
+        async function main() {
+            const dailyLogResponse = await fetch('api/dailylog');
+            const dailyLogData = await dailyLogResponse.json();
+            console.log(dailyLogData);
+
+            const goalsResponse = await fetch('api/goals');
+            const goalsData = await goalsResponse.json();
+            console.log(goalsData);
+
             var ctx = document.getElementById('myChart1').getContext('2d');
             var chart = new Chart(ctx, {
                 // The type of chart we want to create
@@ -155,21 +164,23 @@
                     }
                 }
             });
-        </script>
-        <!-- JQuery, Internal Javascript, and Google Analytics API -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="js/members.js"></script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180240530-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
+        }
+        main()
+    </script>
+    <!-- JQuery, Internal Javascript, and Google Analytics API -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/members.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180240530-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-            gtag('config', 'UA-180240530-1');
-        </script>
-        <div class="footer">
-            <p>project2 copyright 2020</p>
-        </div>
+        gtag('config', 'UA-180240530-1');
+    </script>
+    <div class="footer">
+        <p>project2 copyright 2020</p>
+    </div>
 </body>
 <br>
 <br>
