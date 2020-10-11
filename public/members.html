@@ -17,8 +17,11 @@
         <div class="nav">
             <div class="li flex-container">
                 <a class="nav-link flex-item" id="logo" href="/members">habitude</a>
-                <a class="nav-link flex-item" id="logout" href="/logout">Logout</a>
-                <a class="nav-link flex-item" id="logout" href="/progresschart.html">progress chart</a>
+                <div class="li flex-container">
+                    <a class="nav-link flex-item" id="logout" href="/progresschart.html">progress chart</a>
+                    <a class="nav-link flex-item" id="logout" href="/logout">logout</a>
+
+                </div>
             </div>
         </div>
     </nav>
@@ -30,18 +33,18 @@
                 <h2>Welcome <span class="member-name">!</span></h2>
                 <h3>What habits would you like to practice?</h3>
                 <form action="/goals">
-                <input type="checkbox" id="sleep_time" name="sleep_time" value="sleep time">
-                <label for="sleep_time"> Sleep time</label><br>
-                <input type="checkbox" id="mindful_minutes" name="mindful_minutes" value="Mindful minutes">
-                <label for="mindful_minutes"> Mindfulness</label><br>
-                <input type="checkbox" id="exercise_time" name="exercise_time" value="Exercise time">
-                <label for="exercise_time"> Exercise time</label><br><br>
-                <input type="submit" value="Submit">
+                    <input type="checkbox" id="sleep_time" name="sleep_time" value="sleep time">
+                    <label for="sleep_time"> Sleep time</label><br>
+                    <input type="checkbox" id="mindful_minutes" name="mindful_minutes" value="Mindful minutes">
+                    <label for="mindful_minutes"> Mindfulness</label><br>
+                    <input type="checkbox" id="exercise_time" name="exercise_time" value="Exercise time">
+                    <label for="exercise_time"> Exercise time</label><br><br>
+                    <input type="submit" value="Submit">
                 </form>
             </div>
         </div>
     </div>
-    
+
     <div class="footer">
         <p>project2 copyright 2020</p>
     </div>
@@ -51,10 +54,14 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180240530-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-180240530-1');
     </script>
 </body>
+
 </html>
