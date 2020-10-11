@@ -30,6 +30,7 @@ $(document).ready(() => {
     })
       .then(() => {
         window.location.replace("/members");
+        //$(".member-name").text(`welcome ${email}`)
         // If there's an error, handle it by throwing up a bootstrap alert
       })
       .catch(handleLoginErr);
