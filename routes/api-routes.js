@@ -36,17 +36,28 @@ module.exports = function(app) {
     res.redirect("/");
   });
 
-  // Route for inputting data to the goals table
-  app.post("/api/members", (req, res) => {
-    db.Goal.create({
-      email: req.body.email,
-      password: req.body.password
-    })
-      .then(() => {
-        res.redirect(307, "/api/login");
+  // // Route for inputting data to the goals table
+  // app.post("/api/members", (req, res) => {
+  //   db.Goal.create({
+  //     email: req.body.email,
+  //     password: req.body.password
+  //   })
+  //     .then(() => {
+  //       res.redirect(307, "/api/login");
+  //     })
+  //     .catch(err => {
+  //       res.status(401).json(err);
+  //     });
+  // });
+
+  app.post("/api/goalsub", (req, res) => {
+    console.log("test api-",req.body)
+    db.Goals.create(req.body)
+      .then((data) => {
+        console.log("members", data)
       })
       .catch(err => {
-        res.status(401).json(err);
+        console.log(err.message)
       });
   });
 
