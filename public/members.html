@@ -8,43 +8,38 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
     <link href="stylesheets/members.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
-
-
     <nav>
         <div class="nav">
             <div class="li flex-container">
-                <a class="nav-link flex-item" id="logo" href="/members">habitude</a>
-                <a class="nav-link flex-item" id="logout" href="/logout">Logout</a>
-                <a class="nav-link flex-item" id="logout" href="/progresschart.html">progress chart</a>
+                <a class="nav-link flex-item" id="logo" href="/members">Habitude</a>
+                <div class="control">
+                    <a class="nav-link flex-item" id="logout" href="/community.html">Community</a>
+                    <a class="nav-link flex-item" id="logout" href="/progresschart.html">Chart</a>
+                    <a class="nav-link flex-item" id="logout" href="/logout">Logout</a>
+                </div>
             </div>
         </div>
     </nav>
 
-
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+            <div >
                 <h2>Welcome <span class="member-name">!</span></h2>
                 <h3>What habits would you like to practice?</h3>
                 <form action="/goals">
-                <input type="checkbox" id="sleep_time" name="sleep_time" value="leep time">
-                <label for="sleep_time"> Sleep time</label><br>
-                <input type="checkbox" id="mindful_minutes" name="mindful_minutes" value="Mindful minutes">
-                <label for="mindful_minutes"> Mindfulness</label><br>
-                <input type="checkbox" id="exercise_time" name="exercise_time" value="Exercise time">
-                <label for="exercise_time"> Exercise time</label><br><br>
-                <input type="submit" value="Submit">
+                    <div class="myList">
+                        <input type="checkbox" id="sleep_time" name="sleep_time" value="sleep time">
+                        <label  for="sleep_time"> Sleep time</label><br>
+                        <input  type="checkbox" id="mindful_minutes" name="mindful_minutes" value="Mindful minutes">
+                        <label  for="mindful_minutes"> Mindfulness</label><br>
+                        <input  type="checkbox" id="exercise_time" name="exercise_time" value="Exercise time">
+                        <label  for="exercise_time"> Exercise time</label><br><br>
+                    </div>
+                    <input class="btn btn-primary" type="submit" value="Submit">
                 </form>
-                <h1>Submit your daily activities!</h1>
-                Sleep time: <input type="number" id="sleeptime" name="sleep_time"> hrs<br><br>
-                Mindfulness: <input type="number" id="mindfulminutes" name="mindful_minutes"> hrs<br><br>
-                Exercise time: <input type="number" id="exercisetime" name="exercise_time"> hrs<br><br>             
-                <input type="button" id="submitDaily" value="Submit activity">
-                <h2><span class="yourDaily"></span></h2>
             </div>
         </div>
     </div>
