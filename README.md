@@ -24,7 +24,7 @@ With habitude, you can choose which habits you want to build. Now you're a membe
 ![project image](./imgs/habit1.png)
 
 ## Installation Instructions
-No installation instructions as of yet.
+No installation instructions as of now.
 
 ## Usage Information
 No usage instructions as of yet.
