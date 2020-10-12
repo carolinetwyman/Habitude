@@ -3,7 +3,6 @@ $(document).ready(() => {
   // and updates the HTML on the page
   $.get("/api/user_data").then(data => {
     $(".member-name").text(data.email);
-  });
 
   /////////////////berhane add//////////////////////////////////////
   $("#submitDaily").on('click', (event) => {
@@ -12,11 +11,14 @@ $(document).ready(() => {
     var sleep = $("#sleeptime").val();
     var mindful = $("#mindfulminutes").val();
     var exercise = $("#exercisetime").val();
-    $(".yourDaily").text("You sleep: "+ sleep+"hrs. Mindfulness: "+ mindful +"hrs and  Exercies: "+ exercise)
+
+    console.log("test", sleep, mindful, exercise)
+    $(".yourDaily").text("You sleep: " + sleep + "hrs. Mindfulness: " + mindful + "hrs and  Exercies: " + exercise)
     var newData = {
       sleep_time: sleep,
       mindful_minutes: mindful,
-      exercise_time: exercise
+      exercise_time: exercise,
+      UserId : data.id
     }
     $("#sleeptime").val("");
     $("#mindfulminutes").val("");
@@ -30,6 +32,8 @@ $(document).ready(() => {
       //window.location.replace("/members");
     })
     .catch(err => console.log("yoyo--> " + err));
+
   });
+});
   ///////////////////////////////////////////////
 });

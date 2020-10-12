@@ -13,12 +13,14 @@
 </head>
 
 <body>
-
     <nav>
         <div class="nav">
             <div class="li flex-container">
                 <a class="nav-link flex-item" id="logo" href="/members">habitude</a>
-                <a class="nav-link flex-item" id="logout" href="/logout">Logout</a>
+                <div class="control">
+                    <a class="nav-link flex-item" id="logout" href="/community.html">community</a>
+                    <a class="nav-link flex-item" id="logout" href="/logout">logout</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -28,9 +30,7 @@
         <div class="row">
             <div class="col-md-6">
                 <h1>Submit your daily activities!</h1>
-                Sleep time: <input type="number" id="sleeptime" name="sleep_time"> hrs<br><br>
-                Mindfulness: <input type="number" id="mindfulminutes" name="mindful_minutes"> hrs<br><br>
-                Exercise time: <input type="number" id="exercisetime" name="exercise_time"> hrs<br><br>
+                Sleep time: <input type="number" id="sleeptime" name="sleep_time"> hrs<br><br> Mindfulness: <input type="number" id="mindfulminutes" name="mindful_minutes"> hrs<br><br> Exercise time: <input type="number" id="exercisetime" name="exercise_time">                hrs<br><br>
                 <input type="button" id="submitDaily" value="Submit activity">
                 <h2><span class="yourDaily"></span></h2>
             </div>
@@ -44,18 +44,27 @@
         </div>
     </div>
 
-        <div class="a">
-            <canvas id="myChart1"></canvas>
-        </div>
+    <div class="a">
+        <canvas id="myChart1"></canvas>
+    </div>
 
-        <div class="a">
-            <canvas id="myChart2"></canvas>
-        </div>
+    <div class="a">
+        <canvas id="myChart2"></canvas>
+    </div>
 
-        <div class="a">
-            <canvas id="myChart3"></canvas>
-        </div>
-        <script>
+    <div class="a">
+        <canvas id="myChart3"></canvas>
+    </div>
+    <script>
+        async function main() {
+            const dailyLogResponse = await fetch('api/dailylog');
+            const dailyLogData = await dailyLogResponse.json();
+            console.log(dailyLogData);
+
+            const goalsResponse = await fetch('api/goals');
+            const goalsData = await goalsResponse.json();
+            console.log(goalsData);
+
             var ctx = document.getElementById('myChart1').getContext('2d');
             var chart = new Chart(ctx, {
                 // The type of chart we want to create
@@ -73,14 +82,14 @@
                         label: "Daily Log",
                         borderColor: "#8e5ea2",
                         fill: false
-                    }
-                    ]
+                    }]
                 },
                 options: {
                     title: {
                         display: true,
                         text: 'Sleep Chart'
-                    }, scales: {
+                    },
+                    scales: {
                         yAxes: [{
                             ticks: {
                                 beginAtZero: true,
@@ -106,14 +115,14 @@
                         label: "Daily Log",
                         borderColor: "#FFDA41",
                         fill: false
-                    }
-                    ]
+                    }]
                 },
                 options: {
                     title: {
                         display: true,
                         text: 'Mindfulness Chart'
-                    }, scales: {
+                    },
+                    scales: {
                         yAxes: [{
                             ticks: {
                                 beginAtZero: true,
@@ -139,14 +148,14 @@
                         label: "Daily Log",
                         borderColor: "#394DFF",
                         fill: false
-                    }
-                    ]
+                    }]
                 },
                 options: {
                     title: {
                         display: true,
                         text: 'Exercise Chart'
-                    }, scales: {
+                    },
+                    scales: {
                         yAxes: [{
                             ticks: {
                                 beginAtZero: true,
@@ -155,21 +164,26 @@
                     }
                 }
             });
-        </script>
-        <!-- JQuery, Internal Javascript, and Google Analytics API -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="js/members.js"></script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180240530-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
+        }
+        main()
+    </script>
+    <!-- JQuery, Internal Javascript, and Google Analytics API -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/members.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180240530-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-            gtag('config', 'UA-180240530-1');
-        </script>
-        <div class="footer">
-            <p>project2 copyright 2020</p>
-        </div>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-180240530-1');
+    </script>
+    <div class="footer">
+        <p>project2 copyright 2020</p>
+    </div>
 </body>
 <br>
 <br>

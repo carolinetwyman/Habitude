@@ -1,8 +1,32 @@
+
 /* ************** css nav bar **************** */
+
+
+body {
+    background-color: white;
+}
+
+
+/* ****** navbar ******* */
+
+nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: #A4D2ED;
+}
+
+section {
+    overflow: hidden;
+}
+
 .nav {
-    background-color: #A4D2ED;
+    background-color: white;
     border: none;
-    border-bottom: 1px solid gray;
+
 }
 
 .flex-container {
@@ -12,6 +36,7 @@
     -webkit-align-items: center;
     align-items: center;
 }
+
 
 #logo {
     font-family: 'Alata', sans-serif;
@@ -46,6 +71,29 @@
 section {
     overflow: hidden;
 }
+=======
+.flex-item {
+    margin: 15px
+}
+
+.nav-link {
+    align-items: center;
+}
+
+#logo {
+    padding-left: 30px;
+    font-family: 'Alata', sans-serif;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+#logout {
+    padding-right: 30px;
+    font-family: 'Alata', sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+}
+/******** hero section ********/
 
 .hero {
     background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("./nordicwalking.jpg");
@@ -84,12 +132,15 @@ section {
     font-size: 20px;
 }
 
+.hero .btn {
+    position: relative;
+    bottom: 145px;
+}
+
 .row {
     display: flex;
     justify-content: center;
 }
-
-
 
 .flex-container {
     display: flex;
@@ -102,6 +153,9 @@ section {
 .flex-item {
     margin: 15px
 }
+
+/****** about section *******/
+
 
 .about {
     background-color: white;
@@ -167,6 +221,8 @@ hr.solid {
     border-radius: 20px;
 }
 
+/****** footer  ****** */
+
 .footer {
     position: fixed;
     left: 0;
@@ -186,7 +242,7 @@ hr.solid {
 
 
 
-@media only screen and (min-width: 400px) {   
+@media screen and (min-width: 400px) {   
     #logo {
         padding: 1rem;
         font-size: 40px;
@@ -201,7 +257,7 @@ hr.solid {
  } 
  
  
- @media only screen and (min-width: 645px) {
+ @media  screen and (min-width: 645px) {
      .flex-container {
          flex-direction: row;
      }
@@ -212,7 +268,7 @@ hr.solid {
      
   } 
  
-  @media only screen and (min-width: 785px) {
+  @media screen and (min-width: 785px) {
      .flex-container {
          flex-direction: row;
      }
@@ -229,3 +285,4 @@ hr.solid {
   } 
  
  
+
