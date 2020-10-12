@@ -3,7 +3,7 @@ $(document).ready(() => {
     // and updates the HTML on the page
     $.get("/api/user_data").then(data => {
         $(".member-name").text(data.email);
-    });
+
 
     /////////////////berhane add//////////////////////////////////////
     $("#submitGoals").on('click', (event) => {
@@ -16,10 +16,13 @@ $(document).ready(() => {
 
         console.log("test", sleep, mindful, exercise)
         $(".yourGoals").text("You sleep: " + sleep + "hrs. Mindfulness: " + mindful + "hrs and  Exercies: " + exercise)
+        
         var newData = {
             sleep_time: sleep,
             mindful_minutes: mindful,
-            exercise_time: exercise
+            exercise_time: exercise,
+            UserId : data.id
+            
         }
 
         $.post("/api/goalsub", newData)
@@ -28,11 +31,13 @@ $(document).ready(() => {
                 $("#sleeptime").val("");
                 $("#mindfulminutes").val("");
                 $("#exercisetime").val("");
+                UserId
                 //take the data to the routes and take me to the members webpage
                 //console.log(res.json(Actives))
                 //window.location.replace("/members");
             })
             .catch(err => console.log("yoyo--> " + err));
     });
+})
     ///////////////////////////////////////////////
 });

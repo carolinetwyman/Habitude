@@ -3,7 +3,6 @@ $(document).ready(() => {
   // and updates the HTML on the page
   $.get("/api/user_data").then(data => {
     $(".member-name").text(data.email);
-  });
 
   /////////////////berhane add//////////////////////////////////////
   $("#submitDaily").on('click', (event) => {
@@ -18,7 +17,8 @@ $(document).ready(() => {
     var newData = {
       sleep_time: sleep,
       mindful_minutes: mindful,
-      exercise_time: exercise
+      exercise_time: exercise,
+      UserId : data.id
     }
 
     $.post("/api/sub", newData)
@@ -27,10 +27,12 @@ $(document).ready(() => {
         $("#sleeptime").val("");
         $("#mindfulminutes").val("");
         $("#exercisetime").val("");
+        UserId
         //take the data to the routes and take me to the members webpage
         //console.log(res.json(Actives))
       })
       .catch(err => console.log("yoyo--> " + err));
   });
+});
   ///////////////////////////////////////////////
 });

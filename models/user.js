@@ -20,13 +20,17 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   User.associate = function(models) {
-    // Associating Author with Posts
-    // When an Author is deleted, also delete any associated Posts
+    // Associating User with Goals
+    // When a User is deleted, also delete any associated Goals
     User.hasMany(models.Goals, {
-      onDelete: "cascade"
+      onDelete: "cascade",
+      allowNull: false
     });
+    // Associating User with Daily-Logs
+    // When a User is deleted, also delete any associated Daily-Logs
     User.hasMany(models.DailyLog, {
-      onDelete: "cascade"
+      onDelete: "cascade",
+      allowNull: false
     });
   };
 
