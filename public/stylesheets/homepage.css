@@ -2,6 +2,9 @@ body {
     background-color: white;
 }
 
+
+/* ****** navbar ******* */
+
 nav {
     position: -webkit-sticky;
     position: sticky;
@@ -15,6 +18,44 @@ nav a {
 section {
     overflow: hidden;
 }
+
+.nav {
+    background-color: white;
+    border: none;
+}
+
+.flex-container {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.flex-item {
+    margin: 15px
+}
+
+.nav-link {
+    align-items: center;
+}
+
+#logo {
+    padding-left: 30px;
+    font-family: 'Alata', sans-serif;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+#logout {
+    padding-right: 30px;
+    font-family: 'Alata', sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+/******** hero section ********/
 
 .hero {
     background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("./nordicwalking.jpg");
@@ -53,44 +94,18 @@ section {
     font-size: 20px;
 }
 
+.hero .btn {
+    position: relative;
+    bottom: 145px;
+}
+
 .row {
     display: flex;
     justify-content: center;
 }
 
-.nav {
-    background-color: white;
-    border: none;
-}
 
-.flex-container {
-    display: flex;
-    display: -webkit-flex;
-    justify-content: space-between;
-    -webkit-align-items: center;
-    align-items: center;
-}
-
-.flex-item {
-    margin: 15px
-}
-
-.nav-link {
-    align-items: center;
-}
-
-#logo {
-    padding-left: 30px;
-    font-family: 'Alata', sans-serif;
-    font-size: 25px;
-    text-decoration: none;
-}
-
-#logout {
-    padding-right: 30px;
-    font-family: 'Alata', sans-serif;
-    text-decoration: none;
-}
+/****** about section *******/
 
 .about {
     background-color: white;
@@ -119,6 +134,9 @@ hr.solid {
     max-width: 1000px;
     border-radius: 20px;
 }
+
+
+/***** info section *******/
 
 .info {
     background-color: white;
@@ -153,6 +171,9 @@ hr.solid {
     float: left;
     border-radius: 20px;
 }
+
+
+/****** footer  ****** */
 
 .footer {
     position: fixed;
