@@ -1,6 +1,4 @@
-
 /* ************** css nav bar **************** */
-
 
 body {
     background-color: white;
@@ -13,6 +11,7 @@ nav {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 nav a {
@@ -26,17 +25,27 @@ section {
 .nav {
     background-color: white;
     border: none;
-
 }
 
 .flex-container {
     display: flex;
     flex-direction: column;
+    display: -webkit-flex;
     justify-content: space-between;
     -webkit-align-items: center;
     align-items: center;
 }
 
+.flex-container-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-item {
+    margin: 10px
+}
 
 #logo {
     font-family: 'Alata', sans-serif;
@@ -44,55 +53,14 @@ section {
     text-decoration: none;
 }
 
-.control {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.control a {
+#signup,
+#login {
+    font-family: 'Alata', sans-serif;
     text-decoration: none;
-     margin: 0;
-     padding: 10px;
-}
-
-.control a:hover {
-    background-color: #2196f3;
-}
-
-#logout {
     font-size: 25px;
 }
 
-/* ******************** css nav end ************************* */
 
-section {
-    overflow: hidden;
-}
-=======
-.flex-item {
-    margin: 15px
-}
-
-.nav-link {
-    align-items: center;
-}
-
-#logo {
-    padding-left: 30px;
-    font-family: 'Alata', sans-serif;
-    font-size: 30px;
-    text-decoration: none;
-}
-
-#logout {
-    padding-right: 30px;
-    font-family: 'Alata', sans-serif;
-    text-decoration: none;
-    font-size: 18px;
-}
 /******** hero section ********/
 
 .hero {
@@ -154,8 +122,8 @@ section {
     margin: 15px
 }
 
-/****** about section *******/
 
+/****** about section *******/
 
 .about {
     background-color: white;
@@ -221,6 +189,7 @@ hr.solid {
     border-radius: 20px;
 }
 
+
 /****** footer  ****** */
 
 .footer {
@@ -241,48 +210,37 @@ hr.solid {
 }
 
 
+/****** breakpoints ****** */
 
-@media screen and (min-width: 400px) {   
+@media only screen and (min-width: 400px) {
+    .flex-container {
+        flex-direction: row;
+    }
+    .flex-container-1 {
+        flex-direction: row;
+    }
     #logo {
-        padding: 1rem;
-        font-size: 40px;
+        font-size: 25px;
+        /* margin-left: 10%; */
+        padding-left: 30px;
     }
-    
-    .control {
-        flex-direction: row;
-        display: flex;
-        justify-content: flex-end;
-        width: 100%;
+    #signup,
+    #login {
+        font-size: 20px;
     }
- } 
- 
- 
- @media  screen and (min-width: 645px) {
-     .flex-container {
-         flex-direction: row;
-     }
-     #logo {
-         font-size: 60px;
-         margin-left: 10%;
-     }
-     
-  } 
- 
-  @media screen and (min-width: 785px) {
-     .flex-container {
-         flex-direction: row;
-     }
-     #logo {
-         font-size: 60px;
-         margin-left: 10%;
-     }
-     #logout {
-         font-size: 35px;
-     }
-     .info {
-        flex-direction: row;
+    #login {
+        padding-right: 20px;
     }
-  } 
- 
- 
+}
 
+@media only screen and (min-width: 785px) {
+    .flex-container {
+        flex-direction: row;
+    }
+    #logo {
+        font-size: 30px;
+    }
+    #login {
+        padding-right: 30px;
+    }
+}

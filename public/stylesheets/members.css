@@ -2,49 +2,59 @@ body {
     background-color: white;
 }
 
+
+/* ****** navbar ******* */
+
 nav {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     background-color: #A4D2ED;
+    z-index: 1;
 }
 
 nav a {
     color: white;
 }
 
+section {
+    overflow: hidden;
+}
+
 .nav {
     border: none;
 }
 
-.nav-link {
-    align-items: center;
-}
-
 .flex-container {
     display: flex;
+    flex-direction: column;
     display: -webkit-flex;
     justify-content: space-between;
     -webkit-align-items: center;
     align-items: center;
 }
 
+.flex-container-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .flex-item {
-    margin: 15px
+    margin: 10px
 }
 
 #logo {
-    padding-left: 30px;
     font-family: 'Alata', sans-serif;
-    font-size: 30px;
+    font-size: 40px;
     text-decoration: none;
 }
 
 #logout {
-    padding-right: 30px;
     font-family: 'Alata', sans-serif;
-    font-size: 18px;
     text-decoration: none;
+    font-size: 25px;
 }
 
 
@@ -112,27 +122,23 @@ form {
 
 /* breakpoints  */
 
-
-/* @media only screen and (min-width: 320px) {
-    #logo {
-        padding: 1rem;
-        font-size: 40px;
-    }
-    .control {
-        flex-direction: row;
-        display: flex;
-        justify-content: first baseline;
-        width: 100%;
-    }
-}
-
-@media only screen and (min-width: 645px) {
+@media only screen and (min-width: 530px) {
     .flex-container {
         flex-direction: row;
     }
+    .flex-container-1 {
+        flex-direction: row;
+    }
     #logo {
-        font-size: 60px;
-        margin-left: 10%;
+        font-size: 25px;
+        /* margin-left: 10%; */
+        padding-left: 30px;
+    }
+    #logout {
+        font-size: 20px;
+    }
+    #logout {
+        padding-right: 20px;
     }
 }
 
@@ -141,10 +147,9 @@ form {
         flex-direction: row;
     }
     #logo {
-        font-size: 25px;
-        margin-left: 10%;
+        font-size: 30px;
     }
     #logout {
-        font-size: 25px;
+        padding-right: 30px;
     }
-} */
+}
