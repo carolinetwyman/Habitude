@@ -29,7 +29,6 @@ $(document).ready(() => {
         $("#exercisetime").val("");
         //take the data to the routes and take me to the members webpage
         //console.log(res.json(Actives))
-        //window.location.replace("/members");
       })
       .catch(err => console.log("yoyo--> " + err));
   });

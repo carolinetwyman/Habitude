@@ -6,6 +6,14 @@ const isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function(app) {
   app.get("/", (req, res) => {
+    // If the user logs into the app for the first time
+    // if (req.user) {
+    //   res.redirect("/members");
+    // }
+    res.sendFile(path.join(__dirname, "../public/homepage.html"));
+  });
+
+  app.get("/signup", (req, res) => {
     // If the user already has an account send them to the members page
     if (req.user) {
       res.redirect("/members");
