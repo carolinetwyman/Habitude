@@ -20,18 +20,19 @@ $(document).ready(() => {
       exercise_time: exercise,
       UserId : data.id
     }
-
+    $("#sleeptime").val("");
+    $("#mindfulminutes").val("");
+   ("#exercisetime").val("");
     $.post("/api/sub", newData)
-      .then((res) => {
-        console.log(res)
-        $("#sleeptime").val("");
-        $("#mindfulminutes").val("");
-        $("#exercisetime").val("");
-        UserId
-        //take the data to the routes and take me to the members webpage
-        //console.log(res.json(Actives))
-      })
-      .catch(err => console.log("yoyo--> " + err));
+    .then((res) => {
+      console.log(res)
+    
+      //take the data to the routes and take me to the members webpage
+      //console.log(res.json(Actives))
+      //window.location.replace("/members");
+    })
+    .catch(err => console.log("yoyo--> " + err));
+
   });
 });
   ///////////////////////////////////////////////

@@ -1,3 +1,7 @@
+
+/* ************** css nav bar **************** */
+
+
 body {
     background-color: white;
 }
@@ -22,16 +26,52 @@ section {
 .nav {
     background-color: white;
     border: none;
+
 }
 
 .flex-container {
     display: flex;
-    display: -webkit-flex;
+    flex-direction: column;
     justify-content: space-between;
     -webkit-align-items: center;
     align-items: center;
 }
 
+
+#logo {
+    font-family: 'Alata', sans-serif;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.control {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.control a {
+    text-decoration: none;
+     margin: 0;
+     padding: 10px;
+}
+
+.control a:hover {
+    background-color: #2196f3;
+}
+
+#logout {
+    font-size: 25px;
+}
+
+/* ******************** css nav end ************************* */
+
+section {
+    overflow: hidden;
+}
+=======
 .flex-item {
     margin: 15px
 }
@@ -53,8 +93,6 @@ section {
     text-decoration: none;
     font-size: 18px;
 }
-
-
 /******** hero section ********/
 
 .hero {
@@ -104,8 +142,20 @@ section {
     justify-content: center;
 }
 
+.flex-container {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.flex-item {
+    margin: 15px
+}
 
 /****** about section *******/
+
 
 .about {
     background-color: white;
@@ -135,13 +185,12 @@ hr.solid {
     border-radius: 20px;
 }
 
-
-/***** info section *******/
-
 .info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     background-color: white;
     width: 100%;
-    text-align: center;
     padding: 70px 20px;
 }
 
@@ -172,7 +221,6 @@ hr.solid {
     border-radius: 20px;
 }
 
-
 /****** footer  ****** */
 
 .footer {
@@ -191,3 +239,50 @@ hr.solid {
     padding-top: 15px;
     font-size: 10px;
 }
+
+
+
+@media screen and (min-width: 400px) {   
+    #logo {
+        padding: 1rem;
+        font-size: 40px;
+    }
+    
+    .control {
+        flex-direction: row;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+ } 
+ 
+ 
+ @media  screen and (min-width: 645px) {
+     .flex-container {
+         flex-direction: row;
+     }
+     #logo {
+         font-size: 60px;
+         margin-left: 10%;
+     }
+     
+  } 
+ 
+  @media screen and (min-width: 785px) {
+     .flex-container {
+         flex-direction: row;
+     }
+     #logo {
+         font-size: 60px;
+         margin-left: 10%;
+     }
+     #logout {
+         font-size: 35px;
+     }
+     .info {
+        flex-direction: row;
+    }
+  } 
+ 
+ 
+
