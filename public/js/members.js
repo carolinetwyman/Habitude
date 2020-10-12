@@ -18,13 +18,13 @@ $(document).ready(() => {
       mindful_minutes: mindful,
       exercise_time: exercise
     }
-
+    $("#sleeptime").val("");
+    $("#mindfulminutes").val("");
+   ("#exercisetime").val("");
     $.post("/api/sub", newData)
     .then((res) => {
       console.log(res)
-      $("#sleeptime").val("");
-      $("#mindfulminutes").val("");
-     ("#exercisetime").val("");
+    
       //take the data to the routes and take me to the members webpage
       //console.log(res.json(Actives))
       //window.location.replace("/members");
