@@ -1,11 +1,9 @@
 async function main() {
     const dailyLogResponse = await fetch('api/dailylog');
     const dailyLogData = await dailyLogResponse.json();
-    console.log(dailyLogData);
 
     const goalsResponse = await fetch('api/goals');
     const goalsData = await goalsResponse.json();
-    console.log(goalsData);
 
     let sleepChartData = {
         dailyLogs: [],
@@ -37,7 +35,6 @@ async function main() {
         exerciseChartData.goals.push(goalsData[i].exercise_time)
     }
 
-
     var ctx = document.getElementById('myChart1').getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -55,14 +52,14 @@ async function main() {
                 label: "Daily Log",
                 borderColor: "#8e5ea2",
                 fill: false
-            }]
+            }
+            ]
         },
         options: {
             title: {
                 display: true,
                 text: 'Sleep Chart'
-            },
-            scales: {
+            }, scales: {
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
@@ -88,14 +85,14 @@ async function main() {
                 label: "Daily Log",
                 borderColor: "#FFDA41",
                 fill: false
-            }]
+            }
+            ]
         },
         options: {
             title: {
                 display: true,
                 text: 'Mindfulness Chart'
-            },
-            scales: {
+            }, scales: {
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
@@ -114,21 +111,21 @@ async function main() {
             datasets: [{
                 data: exerciseChartData.goals,
                 label: "Goals",
-                borderColor: "#FF3939",
+                borderColor: "#3940FF",
                 fill: false
             }, {
                 data: exerciseChartData.dailyLogs,
                 label: "Daily Log",
-                borderColor: "#394DFF",
+                borderColor: "#FFDA41",
                 fill: false
-            }]
+            }
+            ]
         },
         options: {
             title: {
                 display: true,
                 text: 'Exercise Chart'
-            },
-            scales: {
+            }, scales: {
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
@@ -138,7 +135,7 @@ async function main() {
         }
     });
 }
-main()
+main() 
 
 window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
