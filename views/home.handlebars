@@ -1,14 +1,27 @@
-    <nav>
-        <div class="nav">
-            <div class="li flex-container">
-                <a class="nav-link flex-item" id="logo" href="/members">habitude</a>
-                <div class="li flex-container-1">
-                    <a class="nav-link flex-item" id="signup" href="/signup">signup</a>
-                    <a class="nav-link flex-item" id="login" href="/login">login</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+
+{{!-- bootstrap navbar  --}}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/members">habitude</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+
+      <li class="nav-item">
+        <a class="nav-link" href="/signup">signup</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/login">login</a>
+      </li>
+     
+    </ul>
+  </div>
+</nav>
+
+
+
     <div class="hero">
         <div>
             <h2>form a new habit today</h2>
@@ -16,6 +29,7 @@
               <a class="btn btn-primary" href="#about" role="button">Learn more</a>
         </div>
     </div>
+
     <div class="container" id="about">
         <div class="about">
             <div>
@@ -23,10 +37,14 @@
                 <p>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
                     survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                        <a class="btn btn-primary" href="/signup" role="button">Let's get started</a>
             </div>
         </div>
     </div>
+
     <hr class="solid">
+    
+    
     <div class="container">       
         <div class="info">
             <div class="infotext">
@@ -34,7 +52,9 @@
                 <p>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
                     survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.u! Specialist diet or not.
+            
                 </p>
+
             </div>
             <img src="./stylesheets/progresschart.png">
         </div>

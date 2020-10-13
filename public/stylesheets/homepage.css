@@ -1,63 +1,31 @@
-/* ************** css nav bar **************** */
-
 body {
     background-color: white;
 }
 
 
-/* ****** navbar ******* */
+/******** navbar ********/
 
-nav {
+.nav-bar {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1;
 }
 
-nav a {
+.navbar-light .navbar-brand {
     color: #A4D2ED;
-}
-
-section {
-    overflow: hidden;
-}
-
-.nav {
-    background-color: white;
-    border: none;
-}
-
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    display: -webkit-flex;
-    justify-content: space-between;
-    -webkit-align-items: center;
-    align-items: center;
-}
-
-.flex-container-1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.flex-item {
-    margin: 10px
-}
-
-#logo {
     font-family: 'Alata', sans-serif;
-    font-size: 40px;
-    text-decoration: none;
-}
-
-#signup,
-#login {
-    font-family: 'Alata', sans-serif;
-    text-decoration: none;
     font-size: 25px;
+}
+
+.bg-light {
+    background-color: white !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #A4D2ED;
+    font-family: 'Alata', sans-serif;
+    font-size: 20px;
 }
 
 
@@ -120,6 +88,12 @@ section {
 
 .flex-item {
     margin: 15px
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #158cba;
+    border-color: #127ba3;
 }
 
 
@@ -189,6 +163,10 @@ hr.solid {
     border-radius: 20px;
 }
 
+.about .btn {
+    margin-top: 25px;
+}
+
 
 /****** footer  ****** */
 
@@ -210,37 +188,15 @@ hr.solid {
 }
 
 
-/****** breakpoints ****** */
+/****** breakpoints below ****** */
 
-@media only screen and (min-width: 400px) {
-    .flex-container {
-        flex-direction: row;
+@media ( max-width:600px) {
+    .hero h2 {
+        font-size: 32px;
+        margin-bottom: 5px;
     }
-    .flex-container-1 {
-        flex-direction: row;
-    }
-    #logo {
-        font-size: 25px;
-        /* margin-left: 10%; */
-        padding-left: 30px;
-    }
-    #signup,
-    #login {
-        font-size: 20px;
-    }
-    #login {
-        padding-right: 20px;
-    }
-}
-
-@media only screen and (min-width: 785px) {
-    .flex-container {
-        flex-direction: row;
-    }
-    #logo {
-        font-size: 30px;
-    }
-    #login {
-        padding-right: 30px;
+    .hero {
+        padding-top: 250px;
+        padding-bottom: 80px;
     }
 }
