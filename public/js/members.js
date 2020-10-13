@@ -20,12 +20,14 @@ $(document).ready(() => {
       exercise_time: exercise,
       UserId : data.id
     }
-    $("#sleeptime").val("");
-    $("#mindfulminutes").val("");
-   ("#exercisetime").val("");
+
     $.post("/api/sub", newData)
     .then((res) => {
       console.log(res)
+    $("#sleeptime").val("");
+    $("#mindfulminutes").val("");
+    $("#exercisetime").val("");
+    UserId
     
       //take the data to the routes and take me to the members webpage
       //console.log(res.json(Actives))
