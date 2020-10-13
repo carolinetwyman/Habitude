@@ -3,7 +3,7 @@
         <div class="li flex-container">
             <a class="nav-link flex-item" id="logo" href="/members">habitude</a>
             <div class="control">
-                <a class="nav-link flex-item" id="logout" href="/community.html">community</a>
+                <a class="nav-link flex-item" id="logout" href="/progresschart">community</a>
                 <a class="nav-link flex-item" id="logout" href="/logout">logout</a>
             </div>
         </div>
@@ -28,138 +28,26 @@
         </div>
     </div>
 </div>
-
-<div class="a">
-    <canvas id="myChart1"></canvas>
+    <div class="containerChart">
+        <div class="chart">
+        <canvas id="myChart1"></canvas>
+    </div>
+    <div class="chart">
+        <canvas id="myChart2"></canvas>
+    </div>
+    <div class="chart">
+        <canvas id="myChart3"></canvas>
+    </div>
 </div>
-<div class="a">
-    <canvas id="myChart2"></canvas>
-</div>
-<div class="a">
-    <canvas id="myChart3"></canvas>
-</div>
-<script>
-    async function main() {
-        const dailyLogResponse = await fetch('api/dailylog');
-        const dailyLogData = await dailyLogResponse.json();
-        console.log(dailyLogData);
 
-        const goalsResponse = await fetch('api/goals');
-        const goalsData = await goalsResponse.json();
-        console.log(goalsData);
 
-        var ctx = document.getElementById('myChart1').getContext('2d');
-        var chart = new Chart(ctx, {
-            // The type of chart we want to create
-            type: 'line',
-            // The data for our dataset
-            data: {
-                labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
-                datasets: [{
-                    data: [8, 8, 8, 8, 8, 8, 8],
-                    label: "Goals",
-                    borderColor: "#FF9C39",
-                    fill: false
-                }, {
-                    data: [5, 9, 7, 5, 6, 10, 4],
-                    label: "Daily Log",
-                    borderColor: "#8e5ea2",
-                    fill: false
-                }
-                ]
-            },
-            options: {
-                title: {
-                    display: true,
-                    text: 'Sleep Chart'
-                }, scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true,
-                        }
-                    }]
-                }
-            }
-        });
-        var ctx = document.getElementById('myChart2').getContext('2d');
-        var chart = new Chart(ctx, {
-            // The type of chart we want to create
-            type: 'line',
-            // The data for our dataset
-            data: {
-                labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
-                datasets: [{
-                    data: [0.5, 1, 0.5, 1.5, 1, 0.5, 1, 1.5],
-                    label: "Goals",
-                    borderColor: "#3940FF",
-                    fill: false
-                }, {
-                    data: [1, 2, 0, 0.5, 1, 1.5, 2, 1],
-                    label: "Daily Log",
-                    borderColor: "#FFDA41",
-                    fill: false
-                }
-                ]
-            },
-            options: {
-                title: {
-                    display: true,
-                    text: 'Mindfulness Chart'
-                }, scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true,
-                        }
-                    }]
-                }
-            }
-        });
-        var ctx = document.getElementById('myChart3').getContext('2d');
-        var chart = new Chart(ctx, {
-            // The type of chart we want to create
-            type: 'line',
-            // The data for our dataset
-            data: {
-                labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
-                datasets: [{
-                    data: [1, 2, 0.5, 1, 0.5, 3, 2, 1.5],
-                    label: "Goals",
-                    borderColor: "#FF3939",
-                    fill: false
-                }, {
-                    data: [2, 0.5, 1, 0.5, 1.5, 2, 1.5, 1],
-                    label: "Daily Log",
-                    borderColor: "#394DFF",
-                    fill: false
-                }
-                ]
-            },
-            options: {
-                title: {
-                    display: true,
-                    text: 'Exercise Chart'
-                }, scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true,
-                        }
-                    }]
-                }
-            }
-        });
-    }
-    main()
-</script>
 <!-- JQuery, Internal Javascript, and Google Analytics API -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/members.js"></script>
+<script type="text/javascript" src="./js/members.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180240530-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-180240530-1');
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="./js/progresschart.js">
+    
 </script>
 <div class="footer">
     <p>project2 copyright 2020</p>
