@@ -67,6 +67,19 @@ form {
 }
 
 
+.containerChart {
+    margin: 0 auto;
+    max-width: 90%;
+    max-width: 1000px;
+}
+
+.chart {
+    width: 90%;
+    margin: 5%;
+    background-color: rgb(191, 222, 232);
+
+}
+
 /************footer***************/
 
 .footer {

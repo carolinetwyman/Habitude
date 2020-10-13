@@ -8,7 +8,9 @@ const path = require('path');
 
 const app = express();
 // Setting up port and requiring models for syncing
-const PORT = process.env.PORT || 2020;
+
+const PORT = process.env.PORT || 8080;
+
 const db = require("./models");
 
 //====================================================================================//
