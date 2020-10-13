@@ -13,7 +13,7 @@ const db = require("./models");
 
 //====================================================================================//
 app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 //====================================================================================//
 // Creating express app and configuring middleware needed for authentication
