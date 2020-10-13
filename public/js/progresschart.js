@@ -5,6 +5,37 @@ async function main() {
 
     const goalsResponse = await fetch('api/goals');
     const goalsData = await goalsResponse.json();
+    console.log(goalsData);
+
+    let sleepChartData = {
+        dailyLogs: [],
+        goals: []
+    };
+
+    let mindfulChartData = {
+        dailyLogs: [],
+        goals: []
+    };
+
+    let exerciseChartData = {
+        dailyLogs: [],
+        goals: []
+    };
+
+    let dailyLogLength = dailyLogData.length;
+    let goalsLength = goalsData.length
+
+    for (let i = 0; i < dailyLogLength; i++) {
+        sleepChartData.dailyLogs.push(dailyLogData[i].sleep_time)
+        mindfulChartData.dailyLogs.push(dailyLogData[i].mindful_minutes)
+        exerciseChartData.dailyLogs.push(dailyLogData[i].exercise_time)
+    }
+
+    for (let i = 0; i < goalsLength; i++) {
+        sleepChartData.goals.push(goalsData[i].sleep_time)
+        mindfulChartData.goals.push(goalsData[i].mindful_minutes)
+        exerciseChartData.goals.push(goalsData[i].exercise_time)
+    }
 
 
     var ctx = document.getElementById('myChart1').getContext('2d');
@@ -15,23 +46,23 @@ async function main() {
         data: {
             labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
             datasets: [{
-                data: [8, 8, 8, 8, 8, 8, 8],
+                data: sleepChartData.goals,
                 label: "Goals",
                 borderColor: "#FF9C39",
                 fill: false
             }, {
-                data: [5, 9, 7, 5, 6, 10, 4],
+                data: sleepChartData.dailyLogs,
                 label: "Daily Log",
                 borderColor: "#8e5ea2",
                 fill: false
-            }
-            ]
+            }]
         },
         options: {
             title: {
                 display: true,
                 text: 'Sleep Chart'
-            }, scales: {
+            },
+            scales: {
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
@@ -48,23 +79,23 @@ async function main() {
         data: {
             labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
             datasets: [{
-                data: [0.5, 1, 0.5, 1.5, 1, 0.5, 1, 1.5],
+                data: mindfulChartData.goals,
                 label: "Goals",
                 borderColor: "#3940FF",
                 fill: false
             }, {
-                data: [1, 2, 0, 0.5, 1, 1.5, 2, 1],
+                data: mindfulChartData.dailyLogs,
                 label: "Daily Log",
                 borderColor: "#FFDA41",
                 fill: false
-            }
-            ]
+            }]
         },
         options: {
             title: {
                 display: true,
                 text: 'Mindfulness Chart'
-            }, scales: {
+            },
+            scales: {
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
@@ -81,23 +112,23 @@ async function main() {
         data: {
             labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
             datasets: [{
-                data: [1, 2, 0.5, 1, 0.5, 3, 2, 1.5],
+                data: exerciseChartData.goals,
                 label: "Goals",
-                borderColor: "#3940FF",
+                borderColor: "#FF3939",
                 fill: false
             }, {
-                data: [2, 0.5, 1, 0.5, 1.5, 2, 1.5, 1],
+                data: exerciseChartData.dailyLogs,
                 label: "Daily Log",
-                borderColor: "#FFDA41",
+                borderColor: "#394DFF",
                 fill: false
-            }
-            ]
+            }]
         },
         options: {
             title: {
                 display: true,
                 text: 'Exercise Chart'
-            }, scales: {
+            },
+            scales: {
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
@@ -107,7 +138,7 @@ async function main() {
         }
     });
 }
-main() 
+main()
 
 window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
