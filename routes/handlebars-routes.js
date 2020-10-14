@@ -35,8 +35,9 @@ module.exports = function(app) {
   app.get("/progresschart", isAuthenticated, (req, res) => res.render('progresschart', {style: 'members.css'}));
 
   //6. community page and its css. To get an access user must be loged in
-  app.get('/community', isAuthenticated, (req, res) => res.render('community',{style: 'community.css'}))
-
+  app.get('/community', isAuthenticated, (req, res) => res.render('community',{style: 'community.css'}));
   
+  //7. success page
+  app.get('/success',  (req, res) => res.render('success', { style:'success.css'})); 
  };
 
