@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>habitude</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+    <link href="stylesheets/homepage.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav">
+            <div class="li flex-container">
+                <a class="nav-link flex-item" id="logo" href="/">habitude</a>
+                <div class="li flex-container-1">
+                    <a class="nav-link flex-item" id="signup" href="/signup">sign up</a>
+                    <a class="nav-link flex-item" id="login" href="/login">log in</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+
+        <div>
+            <h2>form a new habit today</h2>
+            <p>
+                make a clear path for your goals with an everyday tracker
+            </p>
+            <a class="btn btn-primary" href="#about" role="button">Learn more</a>
+        </div>
+    </div>
+
+    <div class="container" id="about">
+        <div class="about">
+            <div>
+                <h3>What is habitude?</h3>
+                <p>
+                    "How we spend our days, is of course how we spend our lives." - Annie Dillard. But are we really aware of how we are spending our days?
+                Habitude helps you take stock of what you're doing and where you're going. Our members page gives you visual feedback of how you are spending 
+                your time, as well has how you aspire to spend it.</p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="solid">
+
+    <div class="container">
+        <div class="info">
+            <div class="infotext">
+                <h4>How does it work?</h4>
+                <p>
+                    You choose where you want to go, we'll help you get there. When you login, you choose the goals that you want to improve upon. 
+                    Now, you're on your way! As soon as you hit "submit" you'll be taken to your personal page. Here is where you can update what you 
+                    did that day, as well as where you can see all the steps you've been taking toward a better lifestyle. 
+                </p>
+            </div>
+            <img src="./stylesheets/progresschart.png">
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>project2 copyright © 2020</p>
+    </div>
+
+    <!-- JQuery, Internal Javascript, and Google Analytics API -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/homepage.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180240530-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-180240530-1');
+    </script>
+</body>
+
+</html>
