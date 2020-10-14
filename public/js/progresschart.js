@@ -144,6 +144,7 @@ async function main() {
             }
         }
     });
+    if(dailyLogLength == 7) {window.location.replace('/success')}
 }
 main() 
 

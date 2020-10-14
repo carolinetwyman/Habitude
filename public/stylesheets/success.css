@@ -1,0 +1,39 @@
+.certificate {
+    width:800px; height:600px;
+    padding:20px; 
+    text-align:center; 
+    border: 10px solid #787878; 
+    margin:0 auto;
+}
+
+.certify {
+    font-size:25px;
+}
+
+.member-name {
+    font-size:30px;
+}
+
+.completed {
+    font-size:25px;
+}
+
+.days {
+    font-size:30px;
+}
+
+.dated {
+    font-size:25px;
+}
+
+.dateCmplt {
+    font-size:30px;
+}
+
+.content {
+    width:750px; 
+    height:550px; 
+    padding:20px; 
+    text-align:center; 
+    border: 5px solid #787878;
+}
