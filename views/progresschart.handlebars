@@ -29,9 +29,9 @@
     <div class="row">
         <div class="col-md-6">
             <h1>Submit your daily activities!</h1>
-            Sleep time: <input type="number" id="sleeptime" name="sleep_time"> hrs<br><br>
-            Mindfulness: <input type="number" id="mindfulminutes" name="mindful_minutes"> hrs<br><br>
-            Exercise time: <input type="number" id="exercisetime" name="exercise_time"> hrs<br><br>
+            Sleep time: <input type="number" min="1" max="24" id="sleeptime" name="sleep_time"> hrs<br><br>
+            Mindfulness: <input type="number" min="1" max="24" id="mindfulminutes" name="mindful_minutes"> hrs<br><br>
+            Exercise time: <input type="number" min="1" max="24" id="exercisetime" name="exercise_time"> hrs<br><br>
             <input type="button" id="submitDaily" value="Submit activity">
             <h2><span class="yourDaily"></span></h2>
         </div>

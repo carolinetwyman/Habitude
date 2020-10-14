@@ -7,32 +7,42 @@ async function main() {
 
     let sleepChartData = {
         dailyLogs: [],
-        goals: []
+        goals: [],
+        dates: []
     };
 
     let mindfulChartData = {
         dailyLogs: [],
-        goals: []
+        goals: [],
+        dates: []
     };
 
     let exerciseChartData = {
         dailyLogs: [],
-        goals: []
+        goals: [],
+        dates: []
     };
 
     let dailyLogLength = dailyLogData.length;
     let goalsLength = goalsData.length
 
     for (let i = 0; i < dailyLogLength; i++) {
-        sleepChartData.dailyLogs.push(dailyLogData[i].sleep_time)
-        mindfulChartData.dailyLogs.push(dailyLogData[i].mindful_minutes)
-        exerciseChartData.dailyLogs.push(dailyLogData[i].exercise_time)
+        sleepChartData.dailyLogs.push(dailyLogData[i].sleep_time);
+        mindfulChartData.dailyLogs.push(dailyLogData[i].mindful_minutes);
+        exerciseChartData.dailyLogs.push(dailyLogData[i].exercise_time);
+        sleepChartData.dates.push(dailyLogData[i].User.createdAt);
+        mindfulChartData.dates.push(dailyLogData[i].User.createdAt);
+        exerciseChartData.dates.push(dailyLogData[i].User.createdAt);
+
     }
 
     for (let i = 0; i < goalsLength; i++) {
-        sleepChartData.goals.push(goalsData[i].sleep_time)
-        mindfulChartData.goals.push(goalsData[i].mindful_minutes)
-        exerciseChartData.goals.push(goalsData[i].exercise_time)
+        sleepChartData.goals.push(goalsData[i].sleep_time);
+        mindfulChartData.goals.push(goalsData[i].mindful_minutes);
+        exerciseChartData.goals.push(goalsData[i].exercise_time);
+        sleepChartData.dates.push(goalsData[i].User.createdAt);
+        mindfulChartData.dates.push(goalsData[i].User.createdAt);
+        exerciseChartData.dates.push(goalsData[i].User.createdAt);
     }
 
     var ctx = document.getElementById('myChart1').getContext('2d');
@@ -41,7 +51,7 @@ async function main() {
         type: 'line',
         // The data for our dataset
         data: {
-            labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
+            labels: sleepChartData.dates,
             datasets: [{
                 data: sleepChartData.goals,
                 label: "Goals",
@@ -74,7 +84,7 @@ async function main() {
         type: 'line',
         // The data for our dataset
         data: {
-            labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
+            labels: mindfulChartData.dates,
             datasets: [{
                 data: mindfulChartData.goals,
                 label: "Goals",
@@ -107,7 +117,7 @@ async function main() {
         type: 'line',
         // The data for our dataset
         data: {
-            labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
+            labels: exerciseChartData.dates,
             datasets: [{
                 data: exerciseChartData.goals,
                 label: "Goals",

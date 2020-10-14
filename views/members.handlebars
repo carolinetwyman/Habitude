@@ -36,11 +36,11 @@
             <h3>What habits would you like to practice?</h3>
             <form>
                 <div class="myList">
-                    <input type="number" id="sleeptime" name="sleep_time" value="sleep time">
+                    <input type="number" min="1" max="24" id="sleeptime" name="sleep_time" value="sleep time">
                     <label  for="sleep_time"> Sleep time</label><br>
-                    <input  type="number" id="mindfulminutes" name="mindful_minutes" value="Mindful minutes">
+                    <input  type="number" min="1" max="24" id="mindfulminutes" name="mindful_minutes" value="Mindful minutes">
                     <label  for="mindful_minutes"> Mindfulness</label><br>
-                    <input  type="number" id="exercisetime" name="exercise_time" value="Exercise time">
+                    <input  type="number" min="1" max="24" id="exercisetime" name="exercise_time" value="Exercise time">
                     <label  for="exercise_time"> Exercise time</label><br><br>
                 </div>
                 <input class="btn btn-primary" type="submit" value="Submit" id="submitGoals">
