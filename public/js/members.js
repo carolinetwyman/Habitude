@@ -12,6 +12,10 @@ $(document).ready(() => {
     var mindful = $("#mindfulminutes").val();
     var exercise = $("#exercisetime").val();
 
+    $("#sleeptime").val("");
+    $("#mindfulminutes").val("");
+    $("#exercisetime").val("");
+
     console.log("test", sleep, mindful, exercise)
     $(".yourDaily").text("You sleep: " + sleep + "hrs. Mindfulness: " + mindful + "hrs and  Exercies: " + exercise)
     var newData = {
@@ -24,16 +28,13 @@ $(document).ready(() => {
     $.post("/api/sub", newData)
     .then((res) => {
       console.log(res)
-    $("#sleeptime").val("");
-    $("#mindfulminutes").val("");
-    $("#exercisetime").val("");
-    UserId
     
       //take the data to the routes and take me to the members webpage
       //console.log(res.json(Actives))
       //window.location.replace("/members");
     })
     .catch(err => console.log("yoyo--> " + err));
+    location.reload();
 
   });
 });

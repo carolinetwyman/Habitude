@@ -43,20 +43,7 @@ module.exports = function (app) {
     res.redirect("/");
   });
 
-  // // Route for inputting data to the goals table
-  // app.post("/api/members", (req, res) => {
-  //   db.Goal.create({
-  //     email: req.body.email,
-  //     password: req.body.password
-  //   })
-  //     .then(() => {
-  //       res.redirect(307, "/api/login");
-  //     })
-  //     .catch(err => {
-  //       res.status(401).json(err);
-  //     });
-  // });
-
+// Route for setting goals data in db
   app.post("/api/goalsub", (req, res) => {
     console.log("test api-", req.body)
     db.Goals.create(req.body, req.user.id)
@@ -68,6 +55,7 @@ module.exports = function (app) {
       });
   });
 
+  //route for setting daily-log data in db
   app.post("/api/sub", (req, res) => {
     console.log(req.body.sleep_time)
     db.DailyLog.create(req.body, req.user.id)
@@ -95,14 +83,6 @@ module.exports = function (app) {
     }
   });
 
-  // // GET route for getting all of the goals
-  // app.get("/api/goals/", function(req, res) {
-  //   db.Goals.findAll({})
-  //     .then(function(dbGoals) {
-  //       res.json(dbGoals);
-  //     });
-  // });
-
   app.get("/api/goals", function (req, res) {
     var query = {};
     if (req.query.user_id) {
@@ -118,14 +98,6 @@ module.exports = function (app) {
       res.json(dbGoals);
     });
   });
-
-  // // GET route for getting all of the daily-logs
-  // app.get("/api/dailylog", function(req, res) {
-  //   db.DailyLog.findAll({})
-  //     .then(function(dbDailyLog) {
-  //       res.json(dbDailyLog);
-  //     });
-  // });
 
   app.get("/api/dailylog", function (req, res) {
     var query = {};
