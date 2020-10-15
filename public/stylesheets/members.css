@@ -1,5 +1,6 @@
 body {
     background-color: white;
+    text-align: center;
 }
 
 .nav-bar {
@@ -34,17 +35,19 @@ h1 {
     font-family: 'Alata', sans-serif;
 }
 
-h2 {
-    font-size: 20px;
-    font-family: 'Alata', sans-serif;
-}
-
 h2,
 h3 {
-    font-family: 'Alata', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     color: #08172C;
     max-width: 100%;
+    font-size: 16px;
+}
+
+h4 {
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 10px;
 }
 
 .container {
