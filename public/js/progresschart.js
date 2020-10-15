@@ -31,10 +31,10 @@ async function main() {
         mindfulChartData.dailyLogs.push(dailyLogData[i].mindful_minutes);
         exerciseChartData.dailyLogs.push(dailyLogData[i].exercise_time);
 
-        while(dailyLogData[i].createdAt == moment()) {
-        sleepChartData.dates.push(moment(dailyLogData[i].createdAt).utc().format('MM-DD'));
-        mindfulChartData.dates.push(moment(dailyLogData[i].createdAt).utc().format('MM-DD'));
-        exerciseChartData.dates.push(moment(dailyLogData[i].createdAt).utc().format('MM-DD'));
+        while (dailyLogData[i].createdAt == moment()) {
+            sleepChartData.dates.push(moment(dailyLogData[i].createdAt).utc().format('MM-DD'));
+            mindfulChartData.dates.push(moment(dailyLogData[i].createdAt).utc().format('MM-DD'));
+            exerciseChartData.dates.push(moment(dailyLogData[i].createdAt).utc().format('MM-DD'));
         }
     }
 
@@ -146,13 +146,12 @@ async function main() {
             }
         }
     });
-    if(dailyLogLength == 7) {window.location.replace('/success')}
+    //if (dailyLogLength == 7) { window.location.replace('/success') }
 }
-main() 
+main()
 
 window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 
 gtag('config', 'UA-180240530-1');
-
