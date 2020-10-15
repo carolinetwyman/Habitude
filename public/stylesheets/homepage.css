@@ -76,7 +76,7 @@ html {
 .hero .btn {
     position: relative;
     bottom: 145px;
-    right: 10px;
+    right: 4px;
 }
 
 .row {
@@ -100,6 +100,7 @@ html {
     color: #ffffff;
     background-color: #158cba;
     border-color: #127ba3;
+    font-family: 'Alata', sans-serif;
 }
 
 
