@@ -1,5 +1,30 @@
+.nav-bar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar-light .navbar-brand {
+    color: white;
+    font-family: 'Alata', sans-serif;
+    font-size: 25px;
+}
+
+.bg-light {
+    background-color: #A4D2ED !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+    font-family: 'Alata', sans-serif;
+    font-size: 20px;
+}
+
 .certificate {
-    width:800px; height:600px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width:800px; height:600px;
     padding:20px; 
     text-align:center; 
     border: 10px solid #787878; 
