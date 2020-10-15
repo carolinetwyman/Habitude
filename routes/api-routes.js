@@ -48,19 +48,15 @@ module.exports = function (app) {
     console.log("test api-", req.body)
     db.Goals.create(req.body, req.user.id)
       .then((data) => {
-        console.log("members", data)
       })
       .catch(err => {
-        console.log(err.message)
       });
   });
 
   //route for setting daily-log data in db
   app.post("/api/sub", (req, res) => {
-    console.log(req.body.sleep_time)
     db.DailyLog.create(req.body, req.user.id)
       .then((data) => {
-        console.log("test", data)
         // res.redirect(307, "/api/login");
       })
       .catch(err => {

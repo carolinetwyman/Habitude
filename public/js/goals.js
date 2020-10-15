@@ -6,7 +6,6 @@ $(document).ready(() => {
 
         $("#submitGoals").on('click', (event) => {
             event.preventDefault();
-            console.log("test click event")
 
 
             var sleep = $("#sleeptime").val();
