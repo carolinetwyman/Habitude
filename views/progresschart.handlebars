@@ -21,18 +21,23 @@
   <div class="row">
     <div class="col-md-12">
       <h1>Submit your daily activities!</h1>
-      Sleep time: <input type="number" min="1" max="24" id="sleeptime" name="sleep_time"> hrs<br><br>
-      Mindfulness: <input type="number" min="1" max="24" id="mindfulminutes" name="mindful_minutes"> hrs<br><br>
-      Exercise time: <input type="number" min="1" max="24" id="exercisetime" name="exercise_time"> hrs<br><br>
-      <input type="button" id="submitDaily" value="Submit activity">
-      <h2><span class="yourDaily"></span></h2>
-    </div>
-  </div>
+
+<div class="dailylist">
+  Sleep time: <input type="number" min="1" max="24" id="sleeptime" name="sleep_time"> hrs<br><br>
+  Mindfulness: <input type="number" min="1" max="24" id="mindfulminutes" name="mindful_minutes"> hrs<br><br>
+  Exercise time: <input type="number" min="1" max="24" id="exercisetime" name="exercise_time"> hrs<br><br>
+  <input class="btn btn-primary" type="button" id="submitDaily" value="Submit activity">
+
+</div>
+
+<h2><span class="yourDaily"></span></h2>
+</div>
+</div>
 </div>
 
 </div>
 <div class="container">
-  <a  class="btn btn-success btn-lg btn-block " href="/success">Check Completion Certifite</a>
+  <a class="btn btn-success btn-lg btn-block " href="/success">Check Completion Certificate</a>
 </div>
 <div class="containerChart">
   <div class="chart">
@@ -41,11 +46,11 @@
   </div>
   <div class="chart">
     <canvas id="myChart2"></canvas>
-        <h2>Daily Mindfulness Hours Compared to The Goals</h2>
+    <h2>Daily Mindfulness Hours Compared to The Goals</h2>
   </div>
   <div class="chart">
     <canvas id="myChart3"></canvas>
-        <h2>Daily Exercise Hours Compared to The Goals</h2>
+    <h2>Daily Exercise Hours Compared to The Goals</h2>
   </div>
 </div>
 
