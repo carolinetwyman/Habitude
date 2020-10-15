@@ -27,7 +27,6 @@ $(document).ready(() => {
 
     $.post("/api/sub", newData)
     .then((res) => {
-      console.log(res)
     
       //take the data to the routes and take me to the members webpage
       //console.log(res.json(Actives))
