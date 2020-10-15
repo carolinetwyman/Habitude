@@ -30,19 +30,21 @@ async function main() {
         sleepChartData.dailyLogs.push(dailyLogData[i].sleep_time);
         mindfulChartData.dailyLogs.push(dailyLogData[i].mindful_minutes);
         exerciseChartData.dailyLogs.push(dailyLogData[i].exercise_time);
-        sleepChartData.dates.push(moment(dailyLogData[i].User.createdAt).utc().format('MM-DD'));
-        mindfulChartData.dates.push(moment(dailyLogData[i].User.createdAt).utc().format('MM-DD'));
-        exerciseChartData.dates.push(moment(dailyLogData[i].User.createdAt).utc().format('MM-DD'));
 
+        while(dailyLogData[i].createdAt == moment()) {
+        sleepChartData.dates.push(moment(dailyLogData[i].createdAt).utc().format('MM-DD'));
+        mindfulChartData.dates.push(moment(dailyLogData[i].createdAt).utc().format('MM-DD'));
+        exerciseChartData.dates.push(moment(dailyLogData[i].createdAt).utc().format('MM-DD'));
+        }
     }
 
     for (let i = 0; i < goalsLength; i++) {
         sleepChartData.goals.push(goalsData[i].sleep_time);
         mindfulChartData.goals.push(goalsData[i].mindful_minutes);
         exerciseChartData.goals.push(goalsData[i].exercise_time);
-        sleepChartData.dates.push(moment(goalsData[i].User.createdAt).utc().format('MM-DD'));
-        mindfulChartData.dates.push(moment(goalsData[i].User.createdAt).utc().format('MM-DD'));
-        exerciseChartData.dates.push(moment(goalsData[i].User.createdAt).utc().format('MM-DD'));
+        sleepChartData.dates.push(moment(goalsData[i].createdAt).utc().format('MM-DD'));
+        mindfulChartData.dates.push(moment(goalsData[i].createdAt).utc().format('MM-DD'));
+        exerciseChartData.dates.push(moment(goalsData[i].createdAt).utc().format('MM-DD'));
     }
 
     var ctx = document.getElementById('myChart1').getContext('2d');
