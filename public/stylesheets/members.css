@@ -28,11 +28,21 @@ body {
 
 /************** main ****************/
 
+h1 {
+    font-size: 25px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    font-family: 'Alata', sans-serif;
+}
+
 h2,
 h3 {
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    color: teal;
+    color: #08172C;
     max-width: 100%;
 }
 
@@ -40,12 +50,11 @@ h3 {
     display: flex;
     justify-content: center;
     width: 90%;
-    max-width: 700px;
-    border: 1px gray solid;
+    max-width: 950px;
+    border: 2px gray solid;
     border-radius: .75rem;
-    margin-top: 3px;
+    margin-top: 20px;
     padding: 1.5em;
-    margin-bottom: 55px;
 }
 
 form {
@@ -66,7 +75,6 @@ form {
     margin-left: 10px;
 }
 
-
 .containerChart {
     margin: 0 auto;
     max-width: 90%;
@@ -77,8 +85,8 @@ form {
     width: 90%;
     margin: 5%;
     background-color: rgb(191, 222, 232);
-
 }
+
 
 /************footer***************/
 

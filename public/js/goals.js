@@ -5,8 +5,9 @@ $(document).ready(() => {
         $(".member-name").text(data.email);
 
         $("#submitGoals").on('click', (event) => {
-            console.log("test click event")
             event.preventDefault();
+            console.log("test click event")
+
 
             var sleep = $("#sleeptime").val();
             var mindful = $("#mindfulminutes").val();
@@ -31,13 +32,13 @@ $(document).ready(() => {
                 .then((res) => {
 
                     console.log(res)
-                    // UserId
-                    //take the data to the routes and take me to the members webpage
-                    //console.log(res.json(Actives))
-                    //window.location.replace("/members");
+                        // UserId
+                        //take the data to the routes and take me to the members webpage
+                        //console.log(res.json(Actives))
+                        //window.location.replace("/members");
                 })
                 .catch(err => console.log("yoyo--> " + err));
-                window.location.replace("/progresschart")
+            window.location.replace("/progresschart")
         });
     })
 
