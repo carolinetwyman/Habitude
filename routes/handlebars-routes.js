@@ -38,6 +38,6 @@ module.exports = function(app) {
   app.get('/community', isAuthenticated, (req, res) => res.render('community',{style: 'community.css'}));
   
   //7. success page
-  app.get('/success',  (req, res) => res.render('success', { style:'success.css'})); 
+  app.get('/success', isAuthenticated, (req, res) => res.render('success', { style:'success.css'})); 
  };
 

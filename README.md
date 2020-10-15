@@ -19,7 +19,7 @@
 
 Every time you login, you can see your progress in charts, and update your your progress. With habitude, you can choose which habits you want to build. Now you're a member of the growing community!
 
-![project image](./imgs/habit3.png)
+![project image](./imgs/habit1.png)
 1. Signup page
 
 ![project image](./imgs/habit2.png)
@@ -40,11 +40,19 @@ Every time you login, you can see your progress in charts, and update your your 
 ## Installation Instructions
 No installation instructions as of now.
 
+Link to URL: https://habitudeapp.herokuapp.com/
 ## Usage Information
-No usage instructions as of yet.
+1. Any one intersted to use habitude app must sign. 
+2. User must login to track daily activities for the goals setup.
+3. Setup your goals and then input your daily activity.
+4. For every activity there is a chart that compare your daily goals and activitys.
+5. Visit the comunity chart to view how popular habitude app is.
+6. Click the Check Completion Certificate button to view your certificate of compliton.
+7. You can login and out any time.
 
 ## License
 [![License:MIT](https://img.shields.io/badge/License-ISC-yellow.svg)](https://opensource.org/licenses/ISC).
+
 
 ## Contributors
 Angel Alexander, Berhane Beyene, Andres Roldan, and Caroline Twyman
