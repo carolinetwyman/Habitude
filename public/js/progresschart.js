@@ -5,24 +5,24 @@ async function main() {
     const goalsData = await goalsResponse.json();
     const currentUser = await fetch('api/user_data');
     const currentUserData = await currentUser.json();
-    console.log(currentUserData.id,"currentserid")
-    console.log("show all users daily",dailyLogData)
+    console.log(currentUserData.id, "currentserid")
+    console.log("show all users daily", dailyLogData)
 
-    var filteredUserDaily = []
-    for (var i = 0; i < dailyLogData.length ; i++) {
+    let filteredUserDaily = [];
+    for (var i = 0; i < dailyLogData.length; i++) {
         if (dailyLogData[i].UserId === currentUserData.id) {
             filteredUserDaily.push(dailyLogData[i])
         }
-    }
-    console.log("filtereduserdaily",filteredUserDaily);
+    };
+    console.log("filtereduserdaily", filteredUserDaily);
 
-    var filteredUserGoal = []
-    for (var i = 0; i < dailyLogData.length ; i++) {
-        if (dailyLogData[i].UserId === currentUserData.id) {
-            filteredUserGoal.push(dailyLogData[i])
+    let filteredUserGoal = [];
+    for (var i = 0; i < goalsData.length; i++) {
+        if (goalsData[i].UserId === currentUserData.id) {
+            filteredUserGoal.push(goalsData[i])
         }
-    }
-    console.log("filteredusergoal",filteredUserGoal);
+    };
+    console.log("filteredusergoal", filteredUserGoal);
 
     let sleepChartData = {
         dailyLogs: [],
@@ -41,9 +41,8 @@ async function main() {
         goals: [],
         dates: []
     };
-    //let dailyLogLength = dailyLogData.length;
+
     let dailyLogLength = filteredUserDaily.length;
-    //let goalsLength = goalsData.length
     let goalsLength = filteredUserGoal.length;
 
     for (let i = 0; i < dailyLogLength; i++) {
@@ -75,11 +74,11 @@ async function main() {
         data: {
             labels: sleepChartData.dates,
             datasets: [{
-            //     data: sleepChartData.goals,
-            //     label: "Goals",
-            //     borderColor: "#FF9C39",
-            //     fill: false
-            // }, {
+                data: sleepChartData.goals,
+                label: "Goals",
+                borderColor: "#FF9C39",
+                fill: false
+            }, {
                 data: sleepChartData.dailyLogs,
                 label: "Daily Log",
                 borderColor: "#8e5ea2",
@@ -112,12 +111,11 @@ async function main() {
                 label: "Daily Log",
                 borderColor: "#3940FF",
                 fill: false
-            // }, {
-            //     data: mindfulChartData.goals,
-            //     label: "Goals",
-            //     borderColor: "#FFDA41",
-            //     fill: false
-            // }
+            }, {
+                data: mindfulChartData.goals,
+                label: "Goals",
+                borderColor: "#FFDA41",
+                fill: false
             }]
         },
         options: {
@@ -141,11 +139,11 @@ async function main() {
         data: {
             labels: exerciseChartData.dates,
             datasets: [{
-            //     data: exerciseChartData.goals,
-            //     label: "Goals",
-            //     borderColor: "#3940FF",
-            //     fill: false
-            // }, {
+                data: exerciseChartData.goals,
+                label: "Goals",
+                borderColor: "#3940FF",
+                fill: false
+            }, {
                 data: exerciseChartData.dailyLogs,
                 label: "Daily Log",
                 borderColor: "#FFDA41",
